@@ -275,3 +275,10 @@ D:\ItoCalculusProject\ItoCalculusProject\bin\Debug\netcoreapp3.1\runtimes\win\li
 D:\ItoCalculusProject\ItoCalculusProject\obj\Debug\netcoreapp3.1\ItoCalculusProject.csproj.CoreCompileInputs.cache
 D:\ItoCalculusProject\ItoCalculusProject\obj\Debug\netcoreapp3.1\ItoCalculusProject.MvcApplicationPartsAssemblyInfo.cs
 D:\ItoCalculusProject\ItoCalculusProject\obj\Debug\netcoreapp3.1\ItoCalculusProject.MvcApplicationPartsAssemblyInfo.cache
+D:\ItoCalculusProject\ItoCalculusProject\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
+D:\ItoCalculusProject\ItoCalculusProject\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+D:\ItoCalculusProject\ItoCalculusProject\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+D:\ItoCalculusProject\ItoCalculusProject\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+D:\ItoCalculusProject\ItoCalculusProject\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+D:\ItoCalculusProject\ItoCalculusProject\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+D:\ItoCalculusProject\ItoCalculusProject\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
