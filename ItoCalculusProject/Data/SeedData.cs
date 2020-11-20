@@ -14,14 +14,14 @@ namespace ItoCalculusProject.Data
         {
             using (var context = new ApplicationDbContext(serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>()))
             {
-                var adminID = await EnsureUser(serviceProvider, testUserPw, "wbjhee@gmail.com");
+                var adminID = await EnsureUser(serviceProvider, testUserPw, "wbjhee","wbjhee@gmail.com");
                 await EnsureRole(serviceProvider, adminID, Constants.AdministratorRole);
 
 
             }
         }
 
-        public static async Task<string> EnsureUser(IServiceProvider serviceProvider, string testUserPw, string UserName)
+        public static async Task<string> EnsureUser(IServiceProvider serviceProvider, string testUserPw, string UserName, string Email)
         {
             var userManager = serviceProvider.GetService<UserManager<IdentityUser>>();
 
@@ -32,6 +32,7 @@ namespace ItoCalculusProject.Data
                 user = new IdentityUser
                 {
                     UserName = UserName,
+                    Email = Email,
                     EmailConfirmed = true
                 };
                 await userManager.CreateAsync(user, testUserPw);

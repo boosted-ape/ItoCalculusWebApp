@@ -43,7 +43,8 @@ namespace ItoCalculusProject.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [EmailAddress]
+            [PersonalData]
+            [Display(Name = "User Name")]
             public string UserName { get; set; }
 
             [Required]
