@@ -3,12 +3,12 @@
 
 namespace ItoCalculusProject.Models
 {
-    public class StockData
+    public class StockDatum
     {
         public int ID { get; set; }
 
-        public int OpenPrice { get; set; }
-        public int ClosePrice { get; set; }
+        public decimal OpenPrice { get; set; }
+        public decimal ClosePrice { get; set; }
         public int Time { get; set; }
     }
 }
