@@ -1,33 +1,26 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{4E33FE25-CD6A-47BE-A453-5E5B7E946DAF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ItoCalculusProject/Authorization/BlogPostOperations.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ItoCalculusProject/Controllers/StockDataController.cs">
     <Files>
-      <File FileName="ItoCalculusProject/Areas/Identity/Pages/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="ItoCalculusProject/Areas/Identity/Pages/_ViewStart.cshtml" />
       <File FileName="ItoCalculusProject/Data/ApplicationDbContext.cs" />
-      <File FileName="ItoCalculusProject/Models/StockName.cs" />
-      <File FileName="ItoCalculusProject/Models/StockData.cs" />
       <File FileName="ItoCalculusProject/Startup.cs" />
       <File FileName="ItoCalculusProject/Program.cs" />
-      <File FileName="ItoCalculusProject/Data/SeedData.cs" Line="17" Column="69" />
-      <File FileName="ItoCalculusProject/Authorization/BlogPostOperations.cs" Line="6" Column="1" />
+      <File FileName="ItoCalculusProject/Data/SeedData.cs" Line="7" Column="40" />
+      <File FileName="ItoCalculusProject/Authorization/BlogPostOperations.cs" />
+      <File FileName="ItoCalculusProject/Models/StockDatum.cs" Line="13" Column="46" />
+      <File FileName="ItoCalculusProject/Models/StockNameHandler.cs" Line="7" Column="34" />
+      <File FileName="ItoCalculusProject/Controllers/StockDataController.cs" Line="2" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ItoCalculusProject" expanded="True">
             <Node name="ItoCalculusProject" expanded="True">
-              <Node name="Areas" expanded="True">
-                <Node name="Identity" expanded="True">
-                  <Node name="Pages" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Authorization" expanded="True">
-                <Node name="BlogPostOperations.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="StockDataController.cs" selected="True" />
               </Node>
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Pages" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>

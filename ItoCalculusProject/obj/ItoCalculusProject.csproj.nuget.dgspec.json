@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ItoCalculusProject\\ItoCalculusProject\\ItoCalculusProject.csproj": {}
+    "/Users/bj/Projects/ItoCalculusProject/ItoCalculusProject/ItoCalculusProject.csproj": {}
   },
   "projects": {
-    "D:\\ItoCalculusProject\\ItoCalculusProject\\ItoCalculusProject.csproj": {
+    "/Users/bj/Projects/ItoCalculusProject/ItoCalculusProject/ItoCalculusProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ItoCalculusProject\\ItoCalculusProject\\ItoCalculusProject.csproj",
+        "projectUniqueName": "/Users/bj/Projects/ItoCalculusProject/ItoCalculusProject/ItoCalculusProject.csproj",
         "projectName": "ItoCalculusProject",
-        "projectPath": "D:\\ItoCalculusProject\\ItoCalculusProject\\ItoCalculusProject.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "D:\\ItoCalculusProject\\ItoCalculusProject\\obj\\",
+        "projectPath": "/Users/bj/Projects/ItoCalculusProject/ItoCalculusProject/ItoCalculusProject.csproj",
+        "packagesPath": "/Users/bj/.nuget/packages/",
+        "outputPath": "/Users/bj/Projects/ItoCalculusProject/ItoCalculusProject/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/bj/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -85,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
         }
       }
     }
