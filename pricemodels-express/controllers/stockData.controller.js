@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../app/models");
 
 const stockNames = db.stockNames;
 const stockData = db.stockData;
