@@ -36,9 +36,12 @@ db.sequelize = sequelize;
 
 db.priceModels = require("./stockNames.js")(sequelize,Sequelize);
 db.stockData = require("./stockData.js")(sequelize, Sequelize);
+db.projectedStockData = require("./projectedStockData")(sequelize,Sequelize);
 
 db.priceModels.hasMany(db.stockData);
+db.priceModels.hasMany(db.projectedStockData);
 db.stockData.belongsTo(db.priceModels);
+db.projectedStockData.belongsTo(db.priceModels);
 
 
 module.exports = db;
