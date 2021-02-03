@@ -11,8 +11,9 @@ exports.create = (req, res) => {
         });
         return
     }
+
     const stockData = {
-        date: req.body.date,
+        date: req.body.date.replace(" ", "T"),
         open: req.body.open,
         close: req.body.close,
         high: req.body.high,
