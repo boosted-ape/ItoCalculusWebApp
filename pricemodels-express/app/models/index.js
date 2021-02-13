@@ -34,7 +34,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.priceModels = require("./stockNames.js")(sequelize,Sequelize);
+db.priceModels = require("./priceModels.js")(sequelize,Sequelize);
 db.stockData = require("./stockData.js")(sequelize, Sequelize);
 db.projectedStockData = require("./projectedStockData")(sequelize,Sequelize);
 
