@@ -2,7 +2,7 @@ import http from "../http-common";
 
 class StockDataTutorialService {
     create(){
-        data = http.get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo");
+        data = http.get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&outputsize=compact&apikey=demo");
         return http.post("/stockdata",data);
     }
 

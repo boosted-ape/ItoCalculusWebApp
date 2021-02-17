@@ -12,12 +12,10 @@ exports.create = (req, res) => {
         return
     }
 
-    //make api call, save and save object json
     //then enumerate all child objects
-    //data = forEach(function){
-    /*  for(var key in data.["Time Series (5min)"]){
-            key = value;
-            key.date = key;
+    /*  for(var key in req.["Time Series (5min)"]){
+            value = req[key];
+            value.date = key;
     }    
     */
     const stockData = {
