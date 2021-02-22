@@ -13,29 +13,22 @@ exports.create = (req, res) => {
     }
 
     //then enumerate all child objects
-    /*  for(var key in req.["Time Series (5min)"]){
+      for(var key in req["Time Series (5min)"]){
             value = req[key];
             value.date = key;
+            StockData.create(value)
+                .then(data=> {
+                    res.send(data);
+                })
+                .catch(err => {
+                    res.status(500).send({
+                        message : err.message || "some error occurred while creating data!"
+                    });
+                });
+            
     }    
-    */
-    const stockData = {
-        date: req.body.date,
-        open: req.body.open,
-        close: req.body.close,
-        high: req.body.high,
-        low: req.body.low,
-        volume: req.body.volume
-    };
 
-    StockData.create(stockData)
-        .then(data => {
-            res.send(data);
-        })
-        .catch(err => {
-            res.status(500).send({
-                message: err.message || "Some error occurred while creating the Data!"
-            });
-        });
+
 };
 
 exports.findAll = (req, res) => {
