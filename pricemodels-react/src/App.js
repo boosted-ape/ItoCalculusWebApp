@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import {Switch, Route, Link} from "react-router-dom";
+import StockDataList from "./components/stockdata-list.component"
 
 class App extends Component {
   render() {
@@ -29,7 +30,6 @@ class App extends Component {
         <div className="container mt-3">
           <Switch>
             <Route exact path={["/", "stockData"]} component={StockDataList} />
-            <Route exact path="/add" component={AddStockData} />
           </Switch>
         </div>
       </div>
