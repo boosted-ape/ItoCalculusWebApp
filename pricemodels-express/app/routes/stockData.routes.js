@@ -3,7 +3,7 @@ module.exports = app => {
 
     var router = require("express").Router();
 
-    router.post("/", tutorials.create);
+    router.post("/", stockData.create);
 
     app.use('/api/stockData', router);
 };
