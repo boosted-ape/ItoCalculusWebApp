@@ -4,16 +4,16 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.DATE
         },
         open: {
-            type: Sequelize.INTEGER
+            type: Sequelize.FLOAT
         },
         close: {
-            type: Sequelize.INTEGER
+            type: Sequelize.FLOAT
         },
         high: {
-            type: Sequelize.INTEGER
+            type: Sequelize.FLOAT
         },
         low: {
-            type:Sequelize.INTEGER
+            type:Sequelize.FLOAT
         },
         volume: {
             type: Sequelize.INTEGER
