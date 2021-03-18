@@ -5,5 +5,9 @@ module.exports = app => {
 
     router.post("/", stockData.create);
 
+    router.get("/", stockData.findAll);
+
+    router.delete("/", stockData.deleteAll);
+
     app.use('/api/stockData', router);
 };

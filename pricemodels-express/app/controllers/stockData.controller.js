@@ -13,14 +13,17 @@ exports.create = (req, res) => {
     }
 
     var value;
+    var databaseEntry = [];
+    var count = 0;
     //then enumerate all child objects
     for (var key in req.body["Time Series (Daily)"]) {
         value = req.body["Time Series (Daily)"][key];
         value.time = key;
-
+        databaseEntry[count] = value;
+        count ++;
     }
 
-    StockData.create(value)
+    StockData.bulkCreate(databaseEntry)
         .then(data => {
             res.send(data);
         })
@@ -34,7 +37,16 @@ exports.create = (req, res) => {
 };
 
 exports.findAll = (req, res) => {
-    const date = req.query.date
+    StockData.findAll()
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occured"
+            });
+        });
 };
 
 exports.findOne = (req, res) => {

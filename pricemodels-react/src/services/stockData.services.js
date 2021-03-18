@@ -12,11 +12,11 @@ class StockDataService {
     }
 
     getAll(){
-        return http.get("/stockdata");
+        return http.get("/");
     }
 
-    delete(id){
-        return http.delete(`/stockdata/${id}`);
+    deleteAll(){
+        return http.delete("/");
     }
 }
 
