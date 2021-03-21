@@ -19,11 +19,6 @@ class App extends Component {
                 Stock Data
             </Link>
             </li>
-            <li className="nav-item">
-              <Link to={"/add"} className="nav-link">
-                Add
-            </Link>
-            </li>
           </div>
         </nav>
 

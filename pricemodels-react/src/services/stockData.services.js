@@ -1,9 +1,10 @@
 import http from "../http-common";
+import axios from "axios";
 
 class StockDataService {
     create(){
         
-        return http.post("/stockdata", http
+        return http.post("/stockData", axios
         .get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&outputsize=compact&apikey=demo")
         .then(response => {
             return response.data
@@ -12,12 +13,12 @@ class StockDataService {
     }
 
     getAll(){
-        return http.get("/");
+        return http.get("/stockData");
     }
 
     deleteAll(){
-        return http.delete("/");
+        return http.delete("/stockData");
     }
 }
 
-export default new StockDataService;
+export default new StockDataService();

@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 
 
@@ -10,14 +9,14 @@ db.sequelize.sync({force: true}).then(() => {
 });
 
 var corsOptions = {
-    origin: "https://localhost:8081"
+    origin: "http://localhost:8081"
 };
 
 app.use(cors(corsOptions));
 
-app.use(bodyParser.json());
+app.use(express.json());
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
     res.json({message : "Welcome to PricingModels!"});

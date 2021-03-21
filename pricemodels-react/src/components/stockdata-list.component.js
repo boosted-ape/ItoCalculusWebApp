@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import StockDataService from "../services/stockData.services";
 //import {Link} from "react-router-dom";
 
-export default class AddStockData extends Component{
+export default class StockDataList extends Component{
     
     constructor(props){
         super(props);
