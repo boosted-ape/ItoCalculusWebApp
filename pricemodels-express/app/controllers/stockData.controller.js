@@ -5,7 +5,7 @@ const StockData = db.stockData;
 const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
-    if (!req.body["Meta Data"]) {
+    if (!req.body.data["Meta Data"]) {
         return res.status(400).send({
             message: "Content canot be empty!"
         });
@@ -16,8 +16,8 @@ exports.create = (req, res) => {
     var databaseEntry = [];
     var count = 0;
     //then enumerate all child objects
-    for (var key in req.body["Time Series (Daily)"]) {
-        value = req.body["Time Series (Daily)"][key];
+    for (var key in req.body.data["Time Series (5min)"]) {
+        value = req.body.data["Time Series (5min)"][key];
         value.time = key;
         databaseEntry[count] = value;
         count ++;

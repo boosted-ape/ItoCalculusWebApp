@@ -7,6 +7,7 @@ export default class StockDataList extends Component{
     constructor(props){
         super(props);
         this.retrieveStockData = this.retrieveStockData.bind(this);
+        this.addStockData = this.addStockData.bind(this);
         this.refreshList = this.refreshList.bind(this);
         
         this.state = {
@@ -17,10 +18,21 @@ export default class StockDataList extends Component{
     }
 
     componentDidMount(){
+        this.addStockData();
         this.retrieveStockData();
 
     }
 
+    addStockData(){
+        StockDataService.create()
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch( e => {
+                console.log(e);
+            });
+    }
+    
     setActiveStockData(stockData, index){
         this.setState({
             currentStockData: stockData,
@@ -41,6 +53,7 @@ export default class StockDataList extends Component{
             });
     }
     refreshList(){
+        this.addStockData();
         this.retrieveStockData();
         this.setState({
             currentStockData: null,
