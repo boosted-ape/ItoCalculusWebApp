@@ -76,7 +76,7 @@ export default class StockDataList extends Component{
                             }
                             onClick={() => this.setActiveStockData(stockDatum,index)}
                             key={index}>
-                                {stockDatum.high, stockDatum.low, stockDatum.volume}
+                                {stockDatum["1. open"], stockDatum["2. high"], stockDatum["3. low"], stockDatum["4. close"], stockDatum["5. volume"]}
                             </li>
                         ))}
                     </ul>
