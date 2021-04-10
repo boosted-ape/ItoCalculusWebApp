@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import {Switch, Route, Link} from "react-router-dom";
 import StockDataList from "./components/stockdata-list.component"
+import CandleSticksGraph from './components/candlesticksGraph.component';
 
 
 class App extends Component {
@@ -26,6 +27,9 @@ class App extends Component {
         <div className="container mt-3">
           <Switch>
             <Route exact path={["/", "stockData"]} component={StockDataList} />
+          </Switch>
+          <Switch>
+            <Route exact path={["/","stockData"]} component={CandleSticksGraph}/>
           </Switch>
         </div>
       </div>

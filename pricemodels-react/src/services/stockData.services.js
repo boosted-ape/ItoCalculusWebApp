@@ -12,7 +12,7 @@ class StockDataService {
     }
 
     deleteAll(){
-        return http.delete("/stockData");
+        http.delete("/stockData");
     }
 }
 

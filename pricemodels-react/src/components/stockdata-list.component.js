@@ -12,6 +12,7 @@ export default class StockDataList extends Component {
         this.retrieveStockData = this.retrieveStockData.bind(this);
         this.addStockData = this.addStockData.bind(this);
         this.refreshList = this.refreshList.bind(this);
+        this.deleteStockData = this.deleteStockData.bind(this);
 
         this.state = {
             stockData: [],
@@ -26,27 +27,20 @@ export default class StockDataList extends Component {
         this.addStockData();
         this.retrieveStockData();
 
-        const myChartRef = this.chartRef.current.getContext("2d");
-
-        var chart = new Chart(myChartRef, {
-            type: "bar",
-            data: {
-                labels: this.state.stockData.map(() => {
-                    return this.state.stockData.time;
-                }),
-                datasets: [{
-                    label: "IBM",
-                    data: this.state.stockData.map(() => {
-                        return this.state.stockData["1. open"]
-                    })
-                }]
-            }
-        })
-
     }
 
     addStockData() {
         StockDataService.create()
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(e => {
+                console.log(e);
+            });
+    }
+
+    deleteStockData() {
+        StockDataService.deleteAll()
             .then(response => {
                 console.log(response.data);
             })
@@ -75,6 +69,7 @@ export default class StockDataList extends Component {
             });
     }
     refreshList() {
+        this.deleteStockData()
         this.addStockData();
         this.retrieveStockData();
         this.setState({
