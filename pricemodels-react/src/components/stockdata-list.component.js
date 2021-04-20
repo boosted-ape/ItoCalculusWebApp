@@ -1,7 +1,7 @@
 import classes from "./BarGraph.module.css";
 import React, { Component, useMemo, useState, useEffect } from "react";
 import StockDataService from "../services/stockData.services";
-var Chart = require("chart.js");
+import {Chart, BarController, registerables} from "chart.js";
 //import {Link} from "react-router-dom";
 
 export default class StockDataList extends Component {
@@ -27,6 +27,31 @@ export default class StockDataList extends Component {
         this.addStockData();
         this.retrieveStockData();
 
+
+
+        console.log(this.state.stockData);
+    }
+
+    componentDidUpdate(){
+        
+        const myChartRef = this.chartRef.current.getContext("2d");
+
+        var candlesticks = new Chart(myChartRef, {
+            type: "bar",
+            data: {
+                labels: this.state.stockData.map( x => {
+                    return x.time;
+                }),
+                datasets: [
+                    {
+                        label: "Sales",
+                        data: this.state.stockData.map ( x => {
+                            return x["1. open"];
+                        })
+                    }
+                ]
+            }
+        })
     }
 
     addStockData() {
@@ -38,6 +63,7 @@ export default class StockDataList extends Component {
                 console.log(e);
             });
     }
+
 
     deleteStockData() {
         StockDataService.deleteAll()
