@@ -3,7 +3,7 @@ import axios from "axios";
 
 class StockDataService {
     async create(){
-        const alphaData = await Promise.resolve(axios.get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&outputsize=compact&apikey=W5GVI7U0ZGG13BFL"));
+        const alphaData = await Promise.resolve(axios.get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=60min&outputsize=compact&apikey=W5GVI7U0ZGG13BFL"));
         http.post("/stockData", alphaData);
     }
 

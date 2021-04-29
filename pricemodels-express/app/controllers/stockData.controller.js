@@ -16,8 +16,8 @@ exports.create = (req, res) => {
     var databaseEntry = [];
     var count = 0;
     //then enumerate all child objects
-    for (var key in req.body.data["Time Series (5min)"]) {
-        value = req.body.data["Time Series (5min)"][key];
+    for (var key in req.body.data["Time Series (60min)"]) {
+        value = req.body.data["Time Series (60min)"][key];
         value.time = key;
         databaseEntry[count] = value;
         count ++;

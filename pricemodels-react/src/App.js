@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
-          <a href="/stockData" className="navbar-brand">
+          <a href="/" className="navbar-brand">
             PricingOptions
         </a>
           <div className="navbar-nav mr-auto">

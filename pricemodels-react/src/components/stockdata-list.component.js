@@ -32,7 +32,7 @@ export default class StockDataList extends Component {
         console.log(this.state.stockData);
     }
 
-    componentDidUpdate(){
+    componentDidUpdate(prevProps, prevState){
         
         const myChartRef = this.chartRef.current.getContext("2d");
 
@@ -44,7 +44,7 @@ export default class StockDataList extends Component {
                 }),
                 datasets: [
                     {
-                        label: "Sales",
+                        label: "open",
                         data: this.state.stockData.map ( x => {
                             return x["1. open"];
                         })
@@ -52,6 +52,7 @@ export default class StockDataList extends Component {
                 ]
             }
         })
+        
     }
 
     addStockData() {
@@ -68,6 +69,9 @@ export default class StockDataList extends Component {
     deleteStockData() {
         StockDataService.deleteAll()
             .then(response => {
+                this.setState({
+                    stockData: []
+                });
                 console.log(response.data);
             })
             .catch(e => {
@@ -95,9 +99,9 @@ export default class StockDataList extends Component {
             });
     }
     refreshList() {
-        this.deleteStockData()
         this.addStockData();
         this.retrieveStockData();
+        this.deleteStockData();
         this.setState({
             currentStockData: null,
             currentIndex: -1
@@ -129,7 +133,9 @@ export default class StockDataList extends Component {
                             id="chart"
                             ref={this.chartRef}/>
                     </div>
+                    <div>
 
+                    </div>
                 </div>
             </div>
         )
