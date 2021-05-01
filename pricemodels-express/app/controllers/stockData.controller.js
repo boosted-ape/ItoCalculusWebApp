@@ -23,7 +23,7 @@ exports.create = (req, res) => {
         count ++;
     }
 
-    StockData.bulkCreate(databaseEntry)
+    StockData.update(databaseEntry)
         .then(data => {
             res.send(data);
         })

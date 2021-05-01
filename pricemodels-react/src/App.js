@@ -26,10 +26,10 @@ class App extends Component {
 
         <div className="container mt-3">
           <Switch>
-            <Route exact path={["/", "stockData"]} component={StockDataList} />
+            <Route exact path={["/", "/stockData"]} component={StockDataList} />
           </Switch>
           <Switch>
-            <Route exact path={["/","stockData"]} component={CandleSticksGraph}/>
+            <Route exact path={["/","/stockData"]} component={CandleSticksGraph}/>
           </Switch>
         </div>
       </div>
