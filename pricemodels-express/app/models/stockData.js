@@ -1,5 +1,10 @@
 module.exports = (sequelize, Sequelize) => {
     const stockData = sequelize.define("stockData",{
+        id:{
+            type: Sequelize.INTEGER,
+            unique: true,
+            primaryKey: true,
+        },
         time: {
             type: Sequelize.DATE
         },

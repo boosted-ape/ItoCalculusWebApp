@@ -1,5 +1,10 @@
 module.exports = (sequelize, Sequelize) => {
     const projectedStockData = sequelize.define("projectedStockData",{
+        id:{
+            type: Sequelize.INTEGER,
+            unique: true,
+            primaryKey: true,
+        },
         time: {
             type: Sequelize.DATE
         },

@@ -19,11 +19,12 @@ exports.create = (req, res) => {
     for (var key in req.body.data["Time Series (60min)"]) {
         value = req.body.data["Time Series (60min)"][key];
         value.time = key;
+        value.id = count;
         databaseEntry[count] = value;
         count ++;
     }
 
-    StockData.update(databaseEntry)
+    StockData.bulkCreate(databaseEntry)
         .then(data => {
             res.send(data);
         })
