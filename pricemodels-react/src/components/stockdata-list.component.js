@@ -34,24 +34,9 @@ export default class StockDataList extends Component {
 
     componentDidUpdate(prevProps, prevState){
         
-        const myChartRef = this.chartRef.current.getContext("2d");
 
-        var candlesticks = new Chart(myChartRef, {
-            type: "bar",
-            data: {
-                labels: this.state.stockData.map( x => {
-                    return x.time;
-                }),
-                datasets: [
-                    {
-                        label: "open",
-                        data: this.state.stockData.map ( x => {
-                            return x["1. open"];
-                        })
-                    }
-                ]
-            }
-        })
+
+
         
     }
 
@@ -92,6 +77,23 @@ export default class StockDataList extends Component {
                 this.setState({
                     stockData: response.data
                 });
+                const myChartRef = this.chartRef.current.getContext("2d");
+                var candlesticks = new Chart(myChartRef, {
+                    type: "bar",
+                    data: {
+                        labels: this.state.stockData.map( x => {
+                            return x.time;
+                        }),
+                        datasets: [
+                            {
+                                label: "open",
+                                data: this.state.stockData.map ( x => {
+                                    return x["1. open"];
+                                })
+                            }
+                        ]
+                    }
+                })
                 console.log(response.data);
             })
             .catch(e => {
