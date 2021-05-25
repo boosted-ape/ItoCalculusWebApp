@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-    const projectedStockData = sequelize.define("projectedStockData",{
+    const projectedStockData = sequelize.define("derivedStockData",{
         id:{
             type: Sequelize.INTEGER,
             unique: true,
@@ -8,7 +8,7 @@ module.exports = (sequelize, Sequelize) => {
         time: {
             type: Sequelize.DATE
         },
-        open: {
+        average: {
             type: Sequelize.FLOAT
         },
         close: {
